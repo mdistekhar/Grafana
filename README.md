@@ -1,5 +1,4 @@
-# Grafana
-Repository containing step-by-step installation and setup of Grafana on Ubuntu. Includes configuration files, service management, and best practices to deploy Grafana for monitoring, visualization, and observability.
+
 # Grafana Installation and Log Monitoring Setup
 
 This repository provides step-by-step instructions to install **Grafana** on Debian/Ubuntu and to set up **Loki** and **Promtail** using Docker for centralized log collection and visualization.
@@ -21,3 +20,7 @@ This repository provides step-by-step instructions to install **Grafana** on Deb
 ```bash
 sudo apt update
 sudo apt install -y apt-transport-https software-properties-common wget
+
+Step 2: Add Grafana GPG key
+sudo mkdir -p /etc/apt/keyrings
+wget -q -O - https://apt.grafana.com/gpg.key | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
